@@ -3,7 +3,7 @@ import { ImageResponse } from '@vercel/og'
 export const config = {
   runtime: 'edge',
 }
-const og =  (props: any) => {
+const logo =  (props: any) => {
   const size = props.nextUrl.searchParams.get('size')
   const style = props.nextUrl.searchParams.get('style')
 
@@ -71,4 +71,4 @@ const og =  (props: any) => {
   )
 }
 
-export default og
+export default logo
