@@ -3,7 +3,7 @@ import { ImageResponse } from '@vercel/og'
 export const config = {
   runtime: 'edge',
 }
-const font = fetch(new URL('../../assets/TmonMonsori.woff', import.meta.url)).then(
+const font = fetch(new URL('../../assets/BMDOHYEON.ttf', import.meta.url)).then(
   (res) => res.arrayBuffer(),
 )
 const og = async (props: any) => {
@@ -58,9 +58,8 @@ const og = async (props: any) => {
       width: 1200,
       height: 600,
       fonts: [{
-        name: 'Black Han Sans',
+        name: 'EliceDigitalBaeum-Bd',
         data: fontData,
-        weight: 400,
         style: 'normal'
       }]
     },
