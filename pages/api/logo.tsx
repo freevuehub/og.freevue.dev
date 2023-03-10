@@ -7,6 +7,8 @@ const og =  (props: any) => {
   const size = props.nextUrl.searchParams.get('size')
   const style = props.nextUrl.searchParams.get('style')
 
+  const currentSize = `${size || 100}%`
+
   return new ImageResponse(
     (
       <div
@@ -23,8 +25,8 @@ const og =  (props: any) => {
           style === 'border' ? (
             <div
               style={{ 
-                width: size || '100%',
-                height: size || '100%',
+                width: currentSize,
+                height: currentSize,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -43,8 +45,8 @@ const og =  (props: any) => {
           ) : (
             <div
               style={{ 
-                width: size || '100%',
-                height: size || '100%',
+                width: currentSize,
+                height: currentSize,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
