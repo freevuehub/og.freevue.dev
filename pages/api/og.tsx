@@ -48,9 +48,7 @@ const og = async (props: any) => {
         </div>
         <h1 style={{ fontSize: '80px', lineHeight: '40px' }}>프리뷰 블로그</h1>
         {
-          title && (
-            <p style={{ fontSize: '40px', lineHeight: '50px' }}>{title}</p>
-          )
+          <p style={{ fontSize: '40px', lineHeight: '50px' }}>{title}</p>
         }
       </div>
     ),
