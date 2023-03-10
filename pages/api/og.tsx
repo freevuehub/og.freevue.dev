@@ -3,7 +3,7 @@ import { ImageResponse } from '@vercel/og'
 export const config = {
   runtime: 'edge',
 }
-const font = fetch(new URL('../../assets/BlackHanSans-Regular.ttf', import.meta.url)).then(
+const font = fetch(new URL('../../assets/TmonMonsori.woff', import.meta.url)).then(
   (res) => res.arrayBuffer(),
 )
 const og = async (props: any) => {
@@ -49,7 +49,7 @@ const og = async (props: any) => {
           }
         </div>
         <div style={{ display: 'flex', fontSize: '60px', lineHeight: '68px' }}>
-          <h1>Freevue Blog</h1>
+          <h1>프리뷰 블로그</h1>
         </div>
         {
           title && <p>{title}</p>
