@@ -34,28 +34,22 @@ const og = async (props: any) => {
             justifyContent: 'center',
             flex: 1,
             width: '100%',
-            gap: 60
+            gap: 40
           }}
           >
-          <div style={{ width: '300px', height: '300px', display: 'flex' }}>
-            <img src="https://og.freevue.dev/api/logo?size=80" alt="" style={{ display: 'flex', width: '100%', filter: 'drop-shadow(0px 5px 10px #2e2e2e70)' }} />
-          </div>
+          <img src="https://og.freevue.dev/api/logo?size=80" alt="" style={{ width: '300px', height: '300px', display: 'flex', filter: 'drop-shadow(0px 5px 10px #2e2e2e70)' }} />
           {
             image && (
-              <div style={{ display: 'flex', width: '300px' }}>
+              <div style={{ display: 'flex', width: '300px', padding: '30px' }}>
                 <img src={image} style={{ width: '100%', display: 'flex' }} alt="" />
               </div>
             )
           }
         </div>
-        <div style={{ display: 'flex', fontSize: '80px', lineHeight: '40px' }}>
-          <h1>프리뷰 블로그</h1>
-        </div>
+        <h1 style={{ fontSize: '80px', lineHeight: '40px' }}>프리뷰 블로그</h1>
         {
           title && (
-            <div style={{ display: 'flex', fontSize: '30px', lineHeight: '20px' }}>
-              <p>{title}</p>
-            </div>
+            <p style={{ fontSize: '40px', lineHeight: '50px' }}>{title}</p>
           )
         }
       </div>
