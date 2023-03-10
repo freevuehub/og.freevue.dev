@@ -48,11 +48,15 @@ const og = async (props: any) => {
             )
           }
         </div>
-        <div style={{ display: 'flex', fontSize: '60px', lineHeight: '68px' }}>
+        <div style={{ display: 'flex', fontSize: '80px', lineHeight: '40px' }}>
           <h1>프리뷰 블로그</h1>
         </div>
         {
-          title && <p>{title}</p>
+          title && (
+            <div style={{ display: 'flex', fontSize: '30px', lineHeight: '20px' }}>
+              <p>{title}</p>
+            </div>
+          )
         }
       </div>
     ),
