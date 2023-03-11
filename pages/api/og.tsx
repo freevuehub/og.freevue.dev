@@ -1,21 +1,26 @@
 import { ImageResponse } from '@vercel/og'
+import { COLOR_LIST } from '~/contant'
 
 export const config = {
   runtime: 'edge',
 }
-const font = fetch(new URL('../../assets/BMDOHYEON.ttf', import.meta.url)).then(
+const font = fetch(new URL('../../assets/Cafe24Ohsquare.ttf', import.meta.url)).then(
   (res) => res.arrayBuffer(),
 )
+const [primary, secodary] = COLOR_LIST[2023]
+const primaryRGB = `rgb(${primary.join(',')})`
 const og = async (props: any) => {
   const fontData = await font
   const image = props.nextUrl.searchParams.get('image')
   const title = props.nextUrl.searchParams.get('title')
+  const desc = props.nextUrl.searchParams.get('desc')
   
   return new ImageResponse(
     (
       <div
         style={{
           // background: 'rgb(24 24 27)',
+          border: `14px solid ${primaryRGB}`,
           background: '#e0e0e0',
           width: '100%',
           height: '100%',
@@ -46,9 +51,31 @@ const og = async (props: any) => {
             )
           }
         </div>
-        <h1 style={{ fontSize: '80px', lineHeight: '40px' }}>프리뷰 블로그</h1>
+        <h1
+          style={{
+            fontSize: '36px',
+            lineHeight: '1px',
+            position: 'absolute',
+            left: '10px',
+            top: '18px',
+            fontFamily: 'EliceDigitalBaeum-Bd',
+          }}
+        >
+          프리뷰 블로그 {title ? '/' : ''} {title}
+        </h1>
         {
-          <p style={{ fontSize: '40px', lineHeight: '50px' }}>{title}</p>
+          <p
+            style={{
+              fontSize: '30px',
+              lineHeight: '1px',
+              position: 'absolute',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              bottom: '18px',
+            }}
+          >
+            {desc}
+          </p>
         }
       </div>
     ),
