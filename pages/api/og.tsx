@@ -19,9 +19,8 @@ const og = async (props: any) => {
     (
       <div
         style={{
-          // background: 'rgb(24 24 27)',
+          background: primaryRGB,
           border: `14px solid ${primaryRGB}`,
-          background: '#e0e0e0',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -34,11 +33,14 @@ const og = async (props: any) => {
       >
         <div
           style={{
+            background: '#e0e0e0',
+            borderRadius: '1.5rem',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             flex: 1,
             width: '100%',
+            height: '100%',
             gap: 40
           }}
           >
@@ -56,8 +58,8 @@ const og = async (props: any) => {
             fontSize: '36px',
             lineHeight: '1px',
             position: 'absolute',
-            left: '10px',
-            top: '18px',
+            left: '15px',
+            top: '25px',
             fontFamily: 'EliceDigitalBaeum-Bd',
           }}
         >
