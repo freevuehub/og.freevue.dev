@@ -4,7 +4,7 @@ import { COLOR_LIST } from '~/contant'
 export const config = {
   runtime: 'edge',
 }
-const font = fetch(new URL('../../assets/Cafe24Ohsquare.ttf', import.meta.url)).then(
+const font = fetch(new URL('../../assets/BMDOHYEON.ttf', import.meta.url)).then(
   (res) => res.arrayBuffer(),
 )
 const [primary, secodary] = COLOR_LIST[2023]
