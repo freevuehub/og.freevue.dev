@@ -28,7 +28,7 @@ const logo =  (props: any) => {
   const size = props.nextUrl.searchParams.get('size')
   const style = props.nextUrl.searchParams.get('style')
   const color = props.nextUrl.searchParams.get('color')
-  const currentSize = `${size || 100}%`
+  const currentSize = `${!(style || '').includes('fit') ? size : 100}%`
 
   return new ImageResponse(
     (
@@ -43,14 +43,14 @@ const logo =  (props: any) => {
         }}
       >
         <div
-          style={{ 
+          style={{
             width: currentSize,
             height: currentSize,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             ...(
-              style === 'border' ? {
+              (style || '').includes('border') ? {
                 borderRadius: '25%',
                 backgroundColor: PRIMARY_RGB
               } : {}
@@ -58,7 +58,7 @@ const logo =  (props: any) => {
           }}
         >
           <div style={
-            style === 'border' ? {
+            (style || '').includes('border') ? {
               display: 'flex',
               width: '65%',
               height: '65%',
@@ -77,8 +77,8 @@ const logo =  (props: any) => {
       </div>
     ),
     {
-      width: 512,
-      height: 512,
+      width: (style || '').includes('fit') ? Number(size) : 512,
+      height: (style || '').includes('fit') ? Number(size) : 512,
     },
   )
 }
