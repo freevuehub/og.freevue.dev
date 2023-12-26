@@ -3,7 +3,7 @@ import { ImageResponse } from '@vercel/og'
 export const config = {
   runtime: 'edge',
 }
-const favicon =  (props: any) => {
+const favicon = (props: any) => {
   const size = props.nextUrl.searchParams.get('size')
   const style = props.nextUrl.searchParams.get('style')
 
@@ -19,13 +19,17 @@ const favicon =  (props: any) => {
           display: 'flex',
         }}
       >
-        <img src="https://og.freevue.dev/api/logo?size=100&style=border" alt="" style={{ display: 'flex', width: '100%' }} />
+        <img
+          src="https://og.freevue.dev/api/logo?size=100&style=border"
+          alt=""
+          style={{ display: 'flex', width: '100%' }}
+        />
       </div>
     ),
     {
       width: 32,
       height: 32,
-    },
+    }
   )
 }
 
