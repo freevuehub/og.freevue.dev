@@ -69,7 +69,7 @@ const og = async (props: any) => {
             top: 0,
             bottom: 0,
             right: 0,
-            background: "rgba(0, 0, 0, 0.7)",
+            background: "rgba(2, 2, 2, 0.2)",
           }}
         >
           <img
