@@ -42,20 +42,22 @@ const og = async (props: any) => {
           // backgroundImage: "url('http://localhost:3000/background.jpg')",
         }}
       >
-        <img
-          style={{
-            width: "20rem",
-            borderRadius: "100%",
-            display: "flex",
-            position: "absolute",
-            left: "1rem",
-            top: "1rem",
-            transform: "rotate(-10deg)",
-            opacity: 0.7,
-          }}
-          src={image}
-          alt=""
-        />
+        {image && (
+          <img
+            style={{
+              width: "20rem",
+              borderRadius: "100%",
+              display: "flex",
+              position: "absolute",
+              left: "1rem",
+              top: "1rem",
+              transform: "rotate(-10deg)",
+              opacity: 0.7,
+            }}
+            src={image}
+            alt=""
+          />
+        )}
         <div
           style={{
             paddingLeft: "5rem",
@@ -82,29 +84,33 @@ const og = async (props: any) => {
             src="https://og.freevue.dev/api/logo?size=100&style=border"
             alt=""
           />
-          <h1
-            style={{
-              width: "70%",
-              marginTop: "auto",
-              lineHeight: "64px",
-              color: COLOR.WHITE,
-              fontSize: "60px",
-              textAlign: "left",
-              wordBreak: "keep-all",
-            }}
-          >
-            {title}
-          </h1>
-          <p
-            style={{
-              color: COLOR.WHITE,
-              opacity: 0.7,
-              fontSize: "20px",
-              lineHeight: "20px",
-            }}
-          >
-            {desc}
-          </p>
+          {title && (
+            <h1
+              style={{
+                width: "70%",
+                marginTop: "auto",
+                lineHeight: "64px",
+                color: COLOR.WHITE,
+                fontSize: "60px",
+                textAlign: "left",
+                wordBreak: "keep-all",
+              }}
+            >
+              {title}
+            </h1>
+          )}
+          {desc && (
+            <p
+              style={{
+                color: COLOR.WHITE,
+                opacity: 0.7,
+                fontSize: "20px",
+                lineHeight: "20px",
+              }}
+            >
+              {desc}
+            </p>
+          )}
         </div>
       </div>
     ),
