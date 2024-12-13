@@ -11,7 +11,7 @@ interface ILogoProps {
   style?: string
 }
 
-const [primary, secodary] = COLOR_LIST[2024]
+const [primary, secodary] = COLOR_LIST[2025]
 const PRIMARY_RGB = `rgb(${primary.join(',')})`
 const SECONDARY_RGB = `rgb(${(secodary || SECONDARY_COLOR(primary)).join(',')})`
 
