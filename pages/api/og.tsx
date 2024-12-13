@@ -7,7 +7,7 @@ export const config = {
 const font = fetch(new URL("../../assets/BMDOHYEON.ttf", import.meta.url)).then(
   (res) => res.arrayBuffer()
 );
-const [primary, secodary] = GET_COLOR[new Date().getFullYear()];
+const [primary, secodary] = GET_COLOR(new Date().getFullYear());
 const primaryRGB = `rgb(${primary.join(",")})`;
 const SECONDARY_RGB = `rgb(${(secodary || SECONDARY_COLOR(primary)).join(
   ","
