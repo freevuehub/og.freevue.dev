@@ -21,6 +21,10 @@ export const COLOR_LIST: { [key: number]: [number, number, number][] } = {
   2012: [[221, 65, 36]],
 }
 
+export const GET_COLOR = (key: number) =>  {
+  return COLOR_LIST[key]
+}
+
 export const SECONDARY_COLOR = (primary: [number, number, number]) => {
   const [red, green, blue] = primary.map((item) => Number(item))
 
